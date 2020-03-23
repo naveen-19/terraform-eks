@@ -48,15 +48,15 @@ pipeline {
 		}
 	 stage('create cluster') {
             steps {
-	      sh 'sudo rm -rf terraform-script-eks'
-	      sh 'git clone https://github.com/Rohit123-Kumar/terraform-script-eks.git'
+	      sh 'sudo rm -rf terraform-eks'
+	      sh 'git clone https://github.com/sushmitabhandari/terraform-eks.git'
 	      //sh 'cd /var/lib/jenkins/workspace/eks/terraform-script-eks'
 	     // sh 'sudo ls -al'
-	      sh 'cd /var/lib/jenkins/workspace/eks/terraform-script-eks && terraform init'
-	      sh 'cd /var/lib/jenkins/workspace/eks/terraform-script-eks && terraform fmt'
-	      sh 'cd /var/lib/jenkins/workspace/eks/terraform-script-eks && terraform validate'
-	      sh 'cd /var/lib/jenkins/workspace/eks/terraform-script-eks && terraform plan'
-	      sh 'cd /var/lib/jenkins/workspace/eks/terraform-script-eks && terraform apply'
+	      sh 'cd /var/lib/jenkins/workspace/eks/terraform-eks && terraform init'
+	      sh 'cd /var/lib/jenkins/workspace/eks/terraform-eks && terraform fmt'
+	      sh 'cd /var/lib/jenkins/workspace/eks/terraform-eks && terraform validate'
+	      sh 'cd /var/lib/jenkins/workspace/eks/terraform-eks && terraform plan'
+	      sh 'cd /var/lib/jenkins/workspace/eks/terraform-eks && terraform apply'
 		
 	    }
 	 }
