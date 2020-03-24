@@ -6,7 +6,7 @@ pipeline {
             steps {
 	      sh 'sudo rm -rf /home/ubuntu/terra'
               sh 'sudo mkdir /home/ubuntu/terra'
-              sh 'sudo cd /home/ubuntu/terra'
+              sh 'cd /home/ubuntu/terra'
 	      sh 'sudo rm -rf /var/lib/jenkins/workspace/eks/terraform'
 	      sh 'sudo rm -rf /var/lib/jenkins/workspace/eks/terraform_0.12.23_linux_amd64.zip'
               sh 'sudo wget https://releases.hashicorp.com/terraform/0.12.23/terraform_0.12.23_linux_amd64.zip'
