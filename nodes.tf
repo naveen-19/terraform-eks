@@ -127,7 +127,7 @@ resource "aws_autoscaling_group" "autoscaling-group" {
 resource "aws_iam_role" "eks-nodes" {
   name               = "${var.nodes_defaults["name"]}"
   path               = "/"
-  assume_role_policy = "${file("./json/nodes-role-policy.json")}"
+  assume_role_policy = "${file("/home/ec2-user/newfolder/json/nodes-role-policy.json")}"
 }
 
 resource "aws_iam_role_policy_attachment" "eks-node-AmazonEKSWorkerNodePolicy" {
