@@ -29,7 +29,7 @@ pipeline {
               sh  'sudo cp ./kubectl /usr/bin/kubectl && export PATH=$PATH:/usr/bin'
               sh  'echo "export PATH=$PATH:/usr/bin" >> ~/.bashrc'
 	      //sh  'echo "export PATH=$PATH:/usr/bin" >> ~/.bash_profile'
-	      sh  'source ~/.bashrc'
+	      sh  'source /home/ubuntu/.bashrc'
 	      //sh  'source ~/.bash_profile'
               sh  'sudo kubectl version --short --client'
               sh  'sudo rm -rf ~/.kube && sudo mkdir ~/.kube'                                 
