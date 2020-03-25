@@ -64,7 +64,7 @@ resource "aws_eks_cluster" "eks-cluster" {
 resource "aws_iam_role" "eks-cluster" {
   name               = "${var.cluster_defaults["name"]}"
   path               = "/"
-  assume_role_policy = "${file("./json/cluster-role-policy.json")}"
+  assume_role_policy = "${file("/home/ec2-user/newfolder/json/cluster-role-policy.json")}"
 }
 
 resource "aws_iam_role_policy_attachment" "k8s-cluster-AmazonEKSClusterPolicy" {
