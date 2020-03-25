@@ -23,7 +23,7 @@ variable "env" {
 }
 
 variable "external-ip" {
-  default = "192.168.1.101/32"
+  default = "3.6.192.207/32"
 }
 
 variable "nodes_defaults" {
