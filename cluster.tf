@@ -16,7 +16,7 @@ resource "aws_security_group" "eks-cluster" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags {
+  tags = {
     Name        = "${var.cluster_defaults["name"]}-sg"
     Environment = "${var.env}"
   }
