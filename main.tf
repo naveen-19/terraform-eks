@@ -61,6 +61,6 @@ resource "aws_internet_gateway" "igw" {
 ## keypair for ec2
 resource "aws_key_pair" "eks-prod-key" {
   key_name   = "${var.nodes_defaults["key_name"]}"
-  public_key = "${file("./it-admin-key.pub")}"
+  public_key = "${file("/homeec2-user/it-admin-key.pub")}"
 }
 
