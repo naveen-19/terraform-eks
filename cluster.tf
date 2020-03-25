@@ -50,8 +50,8 @@ resource "aws_eks_cluster" "eks-cluster" {
     security_group_ids = ["${aws_security_group.eks-cluster.id}"]
 
     subnet_ids = [
-      "${aws_subnet.subnet-1a-prv.*.id}",
-      "${aws_subnet.subnet-1c-prv.*.id}",
+      "${"aws_subnet.subnet-1a-prv.*.id"}",
+      "${"aws_subnet.subnet-1c-prv.*.id"}",
     ]
   }
 
