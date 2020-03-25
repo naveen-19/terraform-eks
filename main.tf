@@ -25,8 +25,8 @@ resource "aws_vpc" "vpc" {
 
 # Specify the provider and access details
 provider "aws" {
-  shared_credentials_file = "./credentials"
-  profile                 = "live"
+  shared_credentials_file = "~/.aws/credentials"
+  profile                 = "test"
   region                  = "${var.region}"
 }
 
